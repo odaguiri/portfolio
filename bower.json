@@ -1,0 +1,16 @@
+{
+  "name": "odaga.com.br",
+  "version": "0.0.0",
+  "moduleType": [
+    "amd",
+    "es6"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "assets",
+    "test",
+    "tests"
+  ]
+}

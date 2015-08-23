@@ -1,0 +1,23 @@
+@import '../gridle/sass/gridle/gridle'
+
+// class names
+$gridle-grid-name-pattern : ('col','%-','%state','%-','%count')
+$gridle-parent-name-pattern : ('row','%-','%state')
+$gridle-prefix-name-pattern : ('col','%-','%state','%-','offset','%-','%count')
+$gridle-push-name-pattern : ('col','%-','%state','%-','push','%-','%count')
+$gridle-pull-name-pattern : ('col','%-','%state','%-','pull','%-','%count')
+$gridle-show-name-pattern : ('visible','%-','%state')
+$gridle-hide-name-pattern : ('hidden','%-','%state')
+
+// basic setup
++gridle_setup((context: 12, gutter-width: $grid-gutter-width, html-states-classes: true))
+
+// register states
++gridle_register_default_mobile_first_states()
+
+// register states
++gridle_register_state(mobile, (max-width : $screen-xs-max))
++gridle_register_state(tablet, (min-width : $screen-sm-min, max-width : $screen-sm-max))
+
+// generate classes
++gridle_generate_classes()

@@ -2,7 +2,9 @@
   "devDependencies": {
     "connect": "^3.4.0",
     "gulp": "^3.9.0",
+    "gulp-bower": "0.0.10",
     "gulp-concat": "^2.6.0",
+    "gulp-notify": "^2.2.0",
     "gulp-sass": "^2.0.4",
     "s": "^0.1.1",
     "serve-static": "^1.10.0"

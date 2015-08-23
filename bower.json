@@ -12,5 +12,9 @@
     "assets",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "gridle": "~1.3.40",
+    "normalize.css": "~3.0.3"
+  }
 }

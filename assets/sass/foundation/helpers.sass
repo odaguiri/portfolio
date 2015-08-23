@@ -1,0 +1,65 @@
+// *************************************
+//
+//   Helpers
+//   -> Functions, mixins, extends and
+//   animations
+//
+// *************************************
+
+
+// -------------------------------------
+//   Media Queries
+// -------------------------------------
+
+=respond-to($val, $query: min-width, $media: screen)
+  @media #{$media} and ($query: $val)
+    @content
+
+=respond-to-xs($media: screen)
+  @media #{$media} and (max-width: $screen-xs-max)
+    @content
+
+=respond-to-sm($media: screen)
+  @media #{$media} and (min-width: $screen-sm-min) and (max-width: $screen-sm-max)
+    @content
+
+=respond-to-md($media: screen)
+  @media #{$media} and (min-width: $screen-md-min) and (max-width: $screen-md-max)
+    @content
+
+=respond-to-lg($media: screen)
+  @media #{$media} and (min-width: $screen-lg-min)
+    @content
+
+// ----- Less than or equal ----- //
+
+=respond-to-xs-lte($media: screen)
+  @media #{$media} and (max-width: $screen-xs-max)
+    @content
+
+
+=respond-to-sm-lte($media: screen)
+  @media #{$media} and (max-width: $screen-sm-max)
+    @content
+
+=respond-to-md-lte($media: screen)
+  @media #{$media} and (max-width: $screen-md-max)
+    @content
+
+=respond-to-lg-lte($media: screen)
+  @media #{$media} and (max-width: $screen-lg-max)
+    @content
+
+// ----- Greater than or equal ----- //
+
+=respond-to-sm-gte($media: screen)
+  @media #{$media} and (min-width: $screen-sm-min)
+    @content
+
+=respond-to-md-gte($media: screen)
+  @media #{$media} and (min-width: $screen-md-min)
+    @content
+
+=respond-to-lg-gte($media: screen)
+  @media #{$media} and (min-width: $screen-lg-min)
+    @content

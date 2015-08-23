@@ -1,8 +1,10 @@
 {
   "devDependencies": {
+    "connect": "^3.4.0",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-sass": "^2.0.4",
-    "s": "^0.1.1"
+    "s": "^0.1.1",
+    "serve-static": "^1.10.0"
   }
 }

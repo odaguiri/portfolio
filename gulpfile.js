@@ -30,7 +30,7 @@ gulp.task('sass', function() {
         config.bowerDir + '/**'
       ]
     })).on('error', notify.onError(function (error) {
-      return 'Error: ' + error.message;
+      return 'SASS: ' + error.message;
      }))
     .pipe(concat('application.css'))
     .pipe(gulp.dest('./public/css'))

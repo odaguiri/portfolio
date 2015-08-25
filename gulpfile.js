@@ -10,7 +10,8 @@ var browserSync = require('browser-sync').create();
 var config = {
   htmlDir: './',
   bowerDir: './assets/vendor',
-  sassDir: './assets/sass'
+  sassDir: './assets/sass',
+  jsDir: './public/js'
 }
 
 // bower
@@ -49,6 +50,9 @@ gulp.task('server', ['sass'], function() {
 
     // html
     gulp.watch(config.htmlDir + '/index.html').on('change', browserSync.reload);
+
+    // js
+    gulp.watch(config.jsDir + '/**/*.js').on('change', browserSync.reload);
 });
 
 // tasks

@@ -14,7 +14,7 @@ function Skill() {
 
   // build center circle
   r.setSize(400, 400);
-  r.circle(200, 200, 59).attr({ stroke: 'none', fill: '#607d8b' });
+  r.circle(200, 200, 59).attr({ stroke: 'none', fill: '#d25a7d' });
 
   // set title
   var title = r.text(200, 200, defaultText).attr({

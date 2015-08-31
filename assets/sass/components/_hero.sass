@@ -6,16 +6,21 @@
 // *************************************
 
 .hero
-  background-color: #232731
   color: #fff
   display: table
   width: 100%
+
+  .hero-drawable
+    position: absolute
+    display: block
 
   .container
     text-align: center
     vertical-align: middle
     display: table-cell
     height: 500px
+    position: relative
+    z-index: 2
 
   p
     font-size: $font-size-h3

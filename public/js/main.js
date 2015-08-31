@@ -208,6 +208,14 @@ function Jellyfish(){
 
 
   }, 4700);
+
+  // on resize
+  window.onresize = function() {
+    // width
+    canvas.width = document.body.clientWidth;
+    paper.setSize(canvas.width, canvas.height);
+    ocean.attr('width', canvas.width);
+  }
 }
 
 window.onload = function() {

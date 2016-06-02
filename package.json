@@ -8,6 +8,7 @@
     "gulp-notify": "^2.2.0",
     "gulp-sass": "^2.0.4",
     "s": "^0.1.1",
-    "serve-static": "^1.10.0"
+    "serve-static": "^1.10.0",
+    "gulp-rsync": "0.0.6"
   }
 }

@@ -6,13 +6,15 @@ var sass = require('gulp-sass');
 var notify = require('gulp-notify') ;
 var bower = require('gulp-bower');
 var browserSync = require('browser-sync').create();
+var rsync  = require('gulp-rsync');
 
 var config = {
   htmlDir: './',
   bowerDir: './assets/vendor',
   sassDir: './assets/sass',
-  jsDir: './public/js'
-}
+  jsDir: './public/js',
+  hostname: '162.243.113.49'
+};
 
 // bower
 gulp.task('bower', function() {
@@ -53,6 +55,25 @@ gulp.task('server', ['sass'], function() {
 
     // js
     gulp.watch(config.jsDir + '/**/*.js').on('change', browserSync.reload);
+});
+
+// deploy
+gulp.task('deploy', function() {
+  gulp.src(['./*.html', './public', './robots.txt', './assets'])
+    .pipe(rsync({
+      hostname: config.hostname,
+      destination: '/var/www/html',
+      archive: true,
+      silent: false,
+      compress: true,
+      progress: true,
+      incremental: true,
+      relative: true,
+      emptyDirectories: true,
+      recursive: true,
+      clean: true,
+      exclude: ['./*.keep'],
+    }));
 });
 
 // tasks

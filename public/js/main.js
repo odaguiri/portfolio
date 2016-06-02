@@ -267,7 +267,6 @@ function Jellyfish(paper){
 
     for(var i = 0; i < structure.tentacles.length; i++) {
       var tentacle = structure.tentacles[i];
-      console.log(tentacle.path);
      }
   function moveTentacles() {
     var cloneTentacles = structure.tentacles;

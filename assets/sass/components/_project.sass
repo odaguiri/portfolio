@@ -32,7 +32,7 @@
   display: inline-block
   vertical-align: top
   padding: 6px 0px 0px
-  margin-right: $padding-large-horizontal
+  margin-right: $padding-large-horizontal*2
   width: 35px
 
   span
@@ -43,3 +43,13 @@
 .project-content
   display: inline-block
   width: 75%
+
+.project-title
+  font-size: $font-size-h5
+  margin-bottom: $padding-small-vertical
+  text-transform: uppercase
+
++respond-to-sm-lte
+  .project
+    padding-top: $padding-large-vertical
+    padding-bottom: $padding-large-vertical

@@ -15,7 +15,6 @@
   ],
   "dependencies": {
     "gridle": "~1.3.40",
-    "normalize.css": "~3.0.3",
-    "raphael": "~2.1.4"
+    "normalize.css": "~3.0.3"
   }
 }

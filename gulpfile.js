@@ -3,16 +3,17 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
-var notify = require('gulp-notify') ;
+var minify = require('gulp-minify');
+var notify = require('gulp-notify');
 var bower = require('gulp-bower');
 var browserSync = require('browser-sync').create();
 var rsync  = require('gulp-rsync');
 
 var config = {
   htmlDir: './',
-  bowerDir: './assets/vendor',
-  sassDir: './assets/sass',
-  jsDir: './public/js',
+  bowerDir: './assets/vendors',
+  sassDir: './assets/stylesheets',
+  jsDir: './assets/javascripts',
   hostname: '162.243.113.49'
 };
 
@@ -40,8 +41,21 @@ gulp.task('sass', function() {
     .pipe(browserSync.stream());
 });
 
+// js
+gulp.task('js', function() {
+  return gulp
+    .src(config.jsDir + '/*.js')
+    .pipe(minify({
+      src: '-debug.js',
+      ext: '.js'
+    }))
+    .pipe(concat('application.js'))
+    .pipe(gulp.dest('./public/js'))
+    .pipe(browserSync.stream());
+});
+
 // Static Server + watching scss/html files
-gulp.task('server', ['sass'], function() {
+gulp.task('server', ['sass', 'js'], function() {
 
     browserSync.init({
       server: "./"
@@ -50,16 +64,16 @@ gulp.task('server', ['sass'], function() {
     // sass
     gulp.watch(config.sassDir + '/**/*.sass', ['sass']);
 
+    // js
+    gulp.watch(config.jsDir + '/**/*.js', ['js']);
+
     // html
     gulp.watch(config.htmlDir + '/index.html').on('change', browserSync.reload);
-
-    // js
-    gulp.watch(config.jsDir + '/**/*.js').on('change', browserSync.reload);
 });
 
 // deploy
 gulp.task('deploy', function() {
-  gulp.src(['./*.html', './public', './robots.txt', './assets'])
+  gulp.src(['./*.html', './public', './robots.txt'])
     .pipe(rsync({
       hostname: config.hostname,
       destination: '/var/www/html',

@@ -1,0 +1,48 @@
+#skills .skill
+  &:nth-child(odd)
+    background-color: #F3F4F8
+
+.skill
+  padding-top: $padding-large-vertical * 4
+  padding-bottom: $padding-large-vertical * 4
+  overflow: hidden
+
+.skill-time
+  font-size: $font-size-h6
+  line-height: 100%
+
+  .icon
+    color: $font-color-icon
+
+.skill-item
+  padding: $padding-large-vertical 0
+  border-bottom: 1px $black-12 solid
+
+  &:last-child
+    border-bottom-color: transparent
+
+.skill-icon
+  display: inline-block
+  vertical-align: top
+  padding: 6px 0px 0px
+  margin-right: $padding-large-horizontal*2
+  width: 35px
+
+  span
+    font-size: $font-size-h1
+    color: $font-color-icon
+    font-weight: bold
+
+.skill-content
+  display: inline-block
+  width: 75%
+
+.skill-title
+  font-size: $font-size-h5
+  margin-bottom: $padding-small-vertical
+  text-transform: uppercase
+
++respond-to-sm-lte
+  .skill
+    padding-top: $padding-large-vertical
+    padding-bottom: $padding-large-vertical

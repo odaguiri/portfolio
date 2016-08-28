@@ -1,16 +1,25 @@
-<header class="hero">
-  <div class="container tac">
-    <h1 class="dn">Portfolio</h1>
-    <figure class="hero-profile">
-      <%= image_tag 'profile.jpg', alt: 'Raul' %></figure>
-    <p>Hi, my name is <strong>Raul Odaguiri</strong>! A fullstack developer who thrives on multi-disciplinary, creative solutions and making the world a better place by sharing experiences.</p>
-
-    <div class="tac">
-      <a href="https://www.github.com/odaguiri" class="btn btn-outline btn-lg" target="_blank">Access my GitHub</a>
-    </div>
-  </div>
-</header>
 <main>
+  <nav id="main-nav" class="nav">
+    <div class="nav-bar container">
+      <ul class="list-unstyled">
+        <li><%= link_to 'Odaga', root_path, class: 'nav-brand' %></li>
+        <li><%= link_to 'Experiences', root_path(anchor: 'experiences'), class: 'nav-link' %></li>
+        <li><%= link_to 'Blog', '#', class: 'nav-link' %></li>
+      </ul>
+    </div>
+  </nav>
+  <header class="hero">
+    <div class="container tac">
+      <h1 class="dn">Portfolio</h1>
+      <figure class="hero-profile">
+        <%= image_tag 'profile.jpg', alt: 'Raul' %></figure>
+      <p>Hi, my name is <strong>Raul Odaguiri</strong>! A fullstack developer who thrives on multi-disciplinary, creative solutions and making the world a better place by sharing experiences.</p>
+
+      <div class="tac">
+        <a href="https://www.github.com/odaguiri" class="btn btn-outline btn-lg" target="_blank">Access my GitHub</a>
+      </div>
+    </div>
+  </header>
   <section id="skills" class="container">
     <div class="row">
       <article class="project col-xs-12 col-md-4">
@@ -266,9 +275,8 @@
         </div>
       </div>
     </article>
-
   </section>
+  <footer class="tac main-footer">
+    <p class="mbf">Develop, Smile and Live :)</p>
+  </footer>
 </main>
-<footer class="tac main-footer">
-  <p class="mbf">Develop, Smile and Live :)</p>
-</footer>

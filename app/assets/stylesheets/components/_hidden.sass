@@ -1,0 +1,15 @@
+=hidden-generate($device)
+  .hidden-#{$device}
+    display: none !important
+
++only-respond-to-xs
+  +hidden-generate(xs)
+
++only-respond-to-sm
+  +hidden-generate(sm)
+
++only-respond-to-md
+  +hidden-generate(md)
+
++only-respond-to-lg
+  +hidden-generate(lg)

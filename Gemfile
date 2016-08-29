@@ -25,6 +25,12 @@ group :development do
   gem 'guard', require: false
   gem 'guard-livereload', require: false
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'capistrano', require: false
+  gem 'capistrano-rvm', require: false
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano3-puma', require: false
+  gem 'capistrano-npm', '~> 1.0', '>= 1.0.2'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

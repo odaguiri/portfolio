@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="True" name="HandheldFriendly">
+    <meta content="320" name="MobileOptimized">
+    <meta content="on" http-equiv="cleartype">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Raul Odaguiri Portfolio</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+  </head>
+
+  <body>
+    <main>
+      <%= render 'shared/nav' %>
+      <%= yield %>
+      <%= render 'shared/footer' %>
+    </main>
+    <%= render 'shared/scripts' %>
+  </body>
+</html>

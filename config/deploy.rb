@@ -5,7 +5,7 @@ lock '3.6.0'
 server '104.131.171.140', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:odaguiri/portfolio.git'
-set :application,     'portfolio'
+set :application,     'odaga'
 set :user,            'web'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0

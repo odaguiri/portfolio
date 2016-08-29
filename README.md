@@ -1,9 +1,24 @@
-1. Open terminal
+# README
 
-2. npm install
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-3. gulp
+Things you may want to cover:
 
-4. Open another termina tab: node server.js
+* Ruby version
 
-5. Access http://localhost:8080
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...

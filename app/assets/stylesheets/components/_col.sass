@@ -1,0 +1,22 @@
+[class*="col-"]
+  float: left
+  padding: 0 $grid-gutter-width/2
+  direction: ltr
+  box-sizing: border-box
+
+=col-generate($device)
+  @for $i from 1 through $grid-columns
+    .col-#{$device}-#{$i}
+      width: percentage($i / $grid-columns)
+
++respond-to-xs
+  +col-generate(xs)
+
++respond-to-sm
+  +col-generate(sm)
+
++respond-to-md
+  +col-generate(md)
+
++respond-to-lg
+  +col-generate(lg)

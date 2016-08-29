@@ -1,294 +1,268 @@
-<main>
-  <nav id="main-nav" class="nav">
-    <div class="nav-toggle-bar container hidden-sm hidden-md hidden-lg">
-      <button id="toggle-nav" class="nav-toggle" onClick="toggleNav('main-nav')">
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32">
-          <rect x="0" y="3" fill="#fff" width="32" height="5" rx="3" ry="3"/>
-          <rect x="0" y="14" fill="#fff" width="32" height="5" rx="3" ry="3"/>
-          <rect x="0" y="25" fill="#fff" width="32" height="5" rx="3" ry="3"/>
-        </svg>
-      </button>
-      <%= link_to 'Odaga', root_path, class: 'nav-brand' %>
+<header class="hero">
+  <div class="container tac">
+    <h1 class="dn">Portfolio</h1>
+    <figure class="hero-profile">
+      <%= image_tag 'profile.jpg', alt: 'Raul' %></figure>
+    <p>Hi, my name is <strong>Raul Odaguiri</strong>! A fullstack developer who thrives on multi-disciplinary, creative solutions and making the world a better place by sharing experiences.</p>
+
+    <div class="tac">
+      <a href="https://www.github.com/odaguiri" class="btn btn-outline btn-lg" target="_blank">Access my GitHub</a>
     </div>
-    <div id="main-nav-bar" class="nav-bar">
-      <div class="container">
-        <ul class="list-unstyled">
-          <li class="hidden-xs"><%= link_to 'Odaga', root_path, class: 'nav-brand' %></li>
-          <li><%= link_to 'Experiences', root_path(anchor: 'experiences'), class: 'nav-link' %></li>
-          <li><%= link_to 'Blog', '#', class: 'nav-link' %></li>
-        </ul>
+  </div>
+</header>
+<section id="skills" class="container">
+  <div class="row">
+    <article class="project col-xs-12 col-md-4">
+      <div class="project-item">
+        <div class="project-icon">
+          <span class="icon" data-icon="&#xe04e;"></span>
+        </div>
+        <div class="project-content">
+          <h4 class="project-title">Concepts</h4>
+          <p>Design Patterns, Map Reduce, Database Denormalization, Platform Structure.</p>
+        </div>
       </div>
-    </div>
-  </nav>
-  <header class="hero">
-    <div class="container tac">
-      <h1 class="dn">Portfolio</h1>
-      <figure class="hero-profile">
-        <%= image_tag 'profile.jpg', alt: 'Raul' %></figure>
-      <p>Hi, my name is <strong>Raul Odaguiri</strong>! A fullstack developer who thrives on multi-disciplinary, creative solutions and making the world a better place by sharing experiences.</p>
-
-      <div class="tac">
-        <a href="https://www.github.com/odaguiri" class="btn btn-outline btn-lg" target="_blank">Access my GitHub</a>
-      </div>
-    </div>
-  </header>
-  <section id="skills" class="container">
-    <div class="row">
-      <article class="project col-xs-12 col-md-4">
-        <div class="project-item">
-          <div class="project-icon">
-            <span class="icon" data-icon="&#xe04e;"></span>
-          </div>
-          <div class="project-content">
-            <h4 class="project-title">Concepts</h4>
-            <p>Design Patterns, Map Reduce, Database Denormalization, Platform Structure.</p>
-          </div>
+    </article>
+    <article class="project col-xs-12 col-md-4">
+      <div class="project-item">
+        <div class="project-icon">
+          <span class="icon" data-icon="&#xe00c;"></span>
         </div>
-      </article>
-      <article class="project col-xs-12 col-md-4">
-        <div class="project-item">
-          <div class="project-icon">
-            <span class="icon" data-icon="&#xe00c;"></span>
-          </div>
-          <div class="project-content">
-            <h4 class="project-title">Front-end</h4>
-            <p>JavaScript, HTML, CSS, SEO, SASS, Coffeescript, Gulp, Bootstrap.</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="project col-xs-12 col-md-4">
-        <div class="project-item">
-          <div class="project-icon">
-            <span class="icon" data-icon="&#xe02b;"></span>
-          </div>
-          <div class="project-content">
-            <h4 class="project-title">Back-end</h4>
-            <p>Ruby on Rails, PostgreSQL, MongoDB, Design Patterns, PHP, API.</p>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section id="projects">
-
-    <!-- iugu -->
-    <article class="project">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 fl">
-            <header class="project-heading">
-              <h3 class="project-heading-title"><a href="https://www.iugu.com" target="_blank">iugu</a> <small>- fintech startup</small></h3>
-              <p class="project-time"><span data-icon="&#xe059;"></span> <time>2015-11</time> - <time>Present</time></p>
-            </header>
-
-            <div class="project-item">
-              <div class="project-icon">
-                <span class="icon" data-icon="&#xe040;"></span>
-              </div>
-              <div class="project-content">
-                <h5>Experience</h5>
-                <p>I'm focused now to transform the monolithic platform to microservices and responsible to develop from the start a business intelligence platform. It was really interesting to train my SQL skills and async compilation.
-              </div>
-            </div>
-
-            <div class="project-item">
-              <div class="project-icon">
-                <span data-icon="&#xe03c;"></span>
-              </div>
-              <div class="project-content">
-                <h5>Code</h5>
-                <p>Ruby on Rails, HTML5, SASS, Javascript, MySQL, PHP, WooCommerce, Wordpress and Async Jobs</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 hidden-xs hidden-sm">
-            <div class='device-macbook-hold fl'>
-              <div class='device-macbook-main'>
-                <div class='device-macbook-inner'>
-                  <%= image_tag 'iugu-macbook.jpg', alt: 'iugu' %>
-                </div><!-- 'device-macbook-inner' -->
-              </div><!-- 'device-macbook-main' -->
-              <div class='device-macbook-sub'>
-                <div class='device-macbook-top'></div>
-                <div class='device-macbook-mid'>
-                  <div class='device-macbook-part'></div>
-                </div><!-- 'device-macbook-mid' -->
-                <div class='device-macbook-bot'></div>
-              </div><!-- 'device-macbook-bot' -->
-            </div>
-          </div>
+        <div class="project-content">
+          <h4 class="project-title">Front-end</h4>
+          <p>JavaScript, HTML, CSS, SEO, SASS, Coffeescript, Gulp, Bootstrap.</p>
         </div>
       </div>
     </article>
 
-    <!-- 99jobs -->
-    <article class="project">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 fr">
-            <header class="project-heading">
-              <h3 class="project-heading-title"><a href="https://www.99jobs.com" target="_blank">99jobs</a> <small>- human resources startup</small></h3>
-              <p class="project-time"><span data-icon="&#xe059;"></span> <time>2013-10</time> - <time>2015-09</time></p>
-            </header>
-
-            <div class="project-item">
-              <div class="project-icon">
-                <span class="icon" data-icon="&#xe040;"></span>
-              </div>
-              <div class="project-content">
-                <h5>Experience</h5>
-                <p>I worked from the beginning the platform development in ruby on rails, it was really cool to get this challenge! Getting experience with human resources, where we do match user and company! Last time I know it was already 800k users... There could apply design patterns concepts, scalable codes and focus on user experience.</p>
-              </div>
-            </div>
-
-            <div class="project-item">
-              <div class="project-icon">
-                <span data-icon="&#xe03c;"></span>
-              </div>
-              <div class="project-content">
-                <h5>Code</h5>
-                <p>Ruby on Rails, HTML5, SASS, Coffeescript, PostgreSQL, MongoDB</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 fl hidden-xs hidden-sm">
-            <div class='device-ipad-hold fr'>
-              <div class='device-ipad-main'>
-                <div class='device-ipad-inner'>
-                  <%= image_tag '99jobs-tablet.jpg', alt: '99jobs' %>
-                </div><!-- 'device-ipad-inner' -->
-              </div><!-- 'device-ipad-main' -->
-              <div class='device-ipad-sub'>
-                <div class='device-ipad-top'></div>
-                <div class='device-ipad-mid'>
-                  <div class='device-ipad-part'></div>
-                </div><!-- 'device-ipad-mid' -->
-                <div class='device-ipad-bot'></div>
-              </div><!-- 'imac-bot' -->
-            </div>
-            <div class='device-iphone-hold fr hidden-md hidden-sm visible-lg'>
-              <div class='device-iphone-main'>
-                <div class='device-iphone-inner'>
-                  <%= image_tag '99jobs-iphone.jpg', alt: '99jobs' %>
-                </div><!-- 'device-iphone-inner' -->
-              </div><!-- 'device-iphone-main' -->
-              <div class='device-iphone-sub'>
-                <div class='device-iphone-top'></div>
-                <div class='device-iphone-mid'>
-                  <div class='device-iphone-part'></div>
-                </div><!-- 'device-iphone-mid' -->
-                <div class='device-iphone-bot'></div>
-              </div><!-- 'device-iphone-bot' -->
-            </div><!-- 'device-iphone-hold' -->
-          </div>
+    <article class="project col-xs-12 col-md-4">
+      <div class="project-item">
+        <div class="project-icon">
+          <span class="icon" data-icon="&#xe02b;"></span>
+        </div>
+        <div class="project-content">
+          <h4 class="project-title">Back-end</h4>
+          <p>Ruby on Rails, PostgreSQL, MongoDB, Design Patterns, PHP, API.</p>
         </div>
       </div>
     </article>
+  </div>
+</section>
 
+<section id="projects">
 
-    <!-- Phocus Interact -->
-    <article class="project">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <header class="project-heading">
-              <h3 class="project-heading-title"><a href="http://www.phocus.com.br" target="_blank">Phocus Interact</a> <small>- webagency</small></h3>
-              <p class="project-time"><span data-icon="&#xe059;"></span> <time>2013-01</time> - <time>2013-09</time></p>
-            </header>
+  <!-- iugu -->
+  <article class="project">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 fl">
+          <header class="project-heading">
+            <h3 class="project-heading-title"><a href="https://www.iugu.com" target="_blank">iugu</a> <small>- fintech startup</small></h3>
+            <p class="project-time"><span data-icon="&#xe059;"></span> <time>2015-11</time> - <time>Present</time></p>
+          </header>
 
-            <div class="project-item">
-              <div class="project-icon">
-                <span class="icon" data-icon="&#xe040;"></span>
-              </div>
-              <div class="project-content">
-                <h5>Experience</h5>
-                <p>It was my real first big project, a global catholic event (World Youth Day)! I helped to develop a kind of ERP, I was really worried with SQL queries performance... and also developed the Pilgrim Allocation which my feeling was "Ohh imagine if a pilgrim have no place to sleep"</p>
-              </div>
+          <div class="project-item">
+            <div class="project-icon">
+              <span class="icon" data-icon="&#xe040;"></span>
             </div>
-
-            <div class="project-item">
-              <div class="project-icon">
-                <span data-icon="&#xe03c;"></span>
-              </div>
-              <div class="project-content">
-                <h5>Code</h5>
-                <p>PHP, MySQL, HTML, CSS, JavaScript, Wordpress</p>
-              </div>
+            <div class="project-content">
+              <h5>Experience</h5>
+              <p>I'm focused now to transform the monolithic platform to microservices and responsible to develop from the start a business intelligence platform. It was really interesting to train my SQL skills and async compilation.
             </div>
           </div>
-          <div class="col-md-6 hidden-xs hidden-sm">
-            <div class='device-macbook-hold fl'>
-              <div class='device-macbook-main'>
-                <div class='device-macbook-inner'>
-                  <%= image_tag 'phocus-macbook.jpg', alt: 'Phocus Interact' %>
-                </div><!-- 'device-macbook-inner' -->
-              </div><!-- 'device-macbook-main' -->
-              <div class='device-macbook-sub'>
-                <div class='device-macbook-top'></div>
-                <div class='device-macbook-mid'>
-                  <div class='device-macbook-part'></div>
-                </div><!-- 'device-macbook-mid' -->
-                <div class='device-macbook-bot'></div>
-              </div><!-- 'device-macbook-bot' -->
+
+          <div class="project-item">
+            <div class="project-icon">
+              <span data-icon="&#xe03c;"></span>
+            </div>
+            <div class="project-content">
+              <h5>Code</h5>
+              <p>Ruby on Rails, HTML5, SASS, Javascript, MySQL, PHP, WooCommerce, Wordpress and Async Jobs</p>
             </div>
           </div>
         </div>
-      </div>
-    </article>
 
-
-    <!-- Clicknow -->
-    <article class="project">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 fr">
-            <header class="project-heading">
-              <h3 class="project-heading-title"><a href="http://www.clicknow.com.br">Clicknow</a> <small>- webagency</small></h3>
-              <p class="project-time"><span data-icon="&#xe059;"></span> <time>2010</time> - <time>2013</time></p>
-            </header>
-            <div class="project-item">
-              <div class="project-icon">
-                <span class="icon" data-icon="&#xe040;"></span>
-              </div>
-              <div class="project-content">
-                <h5>Experience</h5>
-                <p>I was really excited when I discovered javascript animations, being performatic developing back and client sides! I could get a lot of standards and perfectionism! I learned SEO, refactors, web semantic and web standards!</p>
-              </div>
-            </div>
-            <div class="project-item">
-              <div class="project-icon">
-                <span data-icon="&#xe03c;"></span>
-              </div>
-              <div class="project-content">
-                <h5>Code</h5>
-                <p>PHP, MySQL, HTML, CSS, JavaScript, Wordpress</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 fl hidden-xs hidden-sm">
-            <div class='device-imac-hold fr'>
-              <div class='device-imac-main'>
-                <div class='device-imac-inner'>
-                  <%= image_tag 'clicknow-imac.jpg', alt: 'ClickNow' %>
-                </div><!-- 'device-imac-inner' -->
-              </div><!-- 'device-imac-main' -->
-              <div class='device-imac-sub'>
-                <div class='device-imac-top'></div>
-                <div class='device-imac-mid'>
-                  <div class='device-imac-part'></div>
-                </div><!-- 'device-imac-mid' -->
-                <div class='device-imac-bot'></div>
-              </div><!-- 'device-imac-bot' -->
-            </div>
+        <div class="col-md-6 hidden-xs hidden-sm">
+          <div class='device-macbook-hold fl'>
+            <div class='device-macbook-main'>
+              <div class='device-macbook-inner'>
+                <%= image_tag 'iugu-macbook.jpg', alt: 'iugu' %>
+              </div><!-- 'device-macbook-inner' -->
+            </div><!-- 'device-macbook-main' -->
+            <div class='device-macbook-sub'>
+              <div class='device-macbook-top'></div>
+              <div class='device-macbook-mid'>
+                <div class='device-macbook-part'></div>
+              </div><!-- 'device-macbook-mid' -->
+              <div class='device-macbook-bot'></div>
+            </div><!-- 'device-macbook-bot' -->
           </div>
         </div>
       </div>
-    </article>
-  </section>
-  <footer class="tac main-footer">
-    <p class="mbf">Develop, Smile and Live :)</p>
-  </footer>
-</main>
+    </div>
+  </article>
+
+  <!-- 99jobs -->
+  <article class="project">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 fr">
+          <header class="project-heading">
+            <h3 class="project-heading-title"><a href="https://www.99jobs.com" target="_blank">99jobs</a> <small>- human resources startup</small></h3>
+            <p class="project-time"><span data-icon="&#xe059;"></span> <time>2013-10</time> - <time>2015-09</time></p>
+          </header>
+
+          <div class="project-item">
+            <div class="project-icon">
+              <span class="icon" data-icon="&#xe040;"></span>
+            </div>
+            <div class="project-content">
+              <h5>Experience</h5>
+              <p>I worked from the beginning the platform development in ruby on rails, it was really cool to get this challenge! Getting experience with human resources, where we do match user and company! Last time I know it was already 800k users... There could apply design patterns concepts, scalable codes and focus on user experience.</p>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <div class="project-icon">
+              <span data-icon="&#xe03c;"></span>
+            </div>
+            <div class="project-content">
+              <h5>Code</h5>
+              <p>Ruby on Rails, HTML5, SASS, Coffeescript, PostgreSQL, MongoDB</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 fl hidden-xs hidden-sm">
+          <div class='device-ipad-hold fr'>
+            <div class='device-ipad-main'>
+              <div class='device-ipad-inner'>
+                <%= image_tag '99jobs-tablet.jpg', alt: '99jobs' %>
+              </div><!-- 'device-ipad-inner' -->
+            </div><!-- 'device-ipad-main' -->
+            <div class='device-ipad-sub'>
+              <div class='device-ipad-top'></div>
+              <div class='device-ipad-mid'>
+                <div class='device-ipad-part'></div>
+              </div><!-- 'device-ipad-mid' -->
+              <div class='device-ipad-bot'></div>
+            </div><!-- 'imac-bot' -->
+          </div>
+          <div class='device-iphone-hold fr hidden-md hidden-sm visible-lg'>
+            <div class='device-iphone-main'>
+              <div class='device-iphone-inner'>
+                <%= image_tag '99jobs-iphone.jpg', alt: '99jobs' %>
+              </div><!-- 'device-iphone-inner' -->
+            </div><!-- 'device-iphone-main' -->
+            <div class='device-iphone-sub'>
+              <div class='device-iphone-top'></div>
+              <div class='device-iphone-mid'>
+                <div class='device-iphone-part'></div>
+              </div><!-- 'device-iphone-mid' -->
+              <div class='device-iphone-bot'></div>
+            </div><!-- 'device-iphone-bot' -->
+          </div><!-- 'device-iphone-hold' -->
+        </div>
+      </div>
+    </div>
+  </article>
+
+
+  <!-- Phocus Interact -->
+  <article class="project">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <header class="project-heading">
+            <h3 class="project-heading-title"><a href="http://www.phocus.com.br" target="_blank">Phocus Interact</a> <small>- webagency</small></h3>
+            <p class="project-time"><span data-icon="&#xe059;"></span> <time>2013-01</time> - <time>2013-09</time></p>
+          </header>
+
+          <div class="project-item">
+            <div class="project-icon">
+              <span class="icon" data-icon="&#xe040;"></span>
+            </div>
+            <div class="project-content">
+              <h5>Experience</h5>
+              <p>It was my real first big project, a global catholic event (World Youth Day)! I helped to develop a kind of ERP, I was really worried with SQL queries performance... and also developed the Pilgrim Allocation which my feeling was "Ohh imagine if a pilgrim have no place to sleep"</p>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <div class="project-icon">
+              <span data-icon="&#xe03c;"></span>
+            </div>
+            <div class="project-content">
+              <h5>Code</h5>
+              <p>PHP, MySQL, HTML, CSS, JavaScript, Wordpress</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 hidden-xs hidden-sm">
+          <div class='device-macbook-hold fl'>
+            <div class='device-macbook-main'>
+              <div class='device-macbook-inner'>
+                <%= image_tag 'phocus-macbook.jpg', alt: 'Phocus Interact' %>
+              </div><!-- 'device-macbook-inner' -->
+            </div><!-- 'device-macbook-main' -->
+            <div class='device-macbook-sub'>
+              <div class='device-macbook-top'></div>
+              <div class='device-macbook-mid'>
+                <div class='device-macbook-part'></div>
+              </div><!-- 'device-macbook-mid' -->
+              <div class='device-macbook-bot'></div>
+            </div><!-- 'device-macbook-bot' -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+
+  <!-- Clicknow -->
+  <article class="project">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 fr">
+          <header class="project-heading">
+            <h3 class="project-heading-title"><a href="http://www.clicknow.com.br">Clicknow</a> <small>- webagency</small></h3>
+            <p class="project-time"><span data-icon="&#xe059;"></span> <time>2010</time> - <time>2013</time></p>
+          </header>
+          <div class="project-item">
+            <div class="project-icon">
+              <span class="icon" data-icon="&#xe040;"></span>
+            </div>
+            <div class="project-content">
+              <h5>Experience</h5>
+              <p>I was really excited when I discovered javascript animations, being performatic developing back and client sides! I could get a lot of standards and perfectionism! I learned SEO, refactors, web semantic and web standards!</p>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-icon">
+              <span data-icon="&#xe03c;"></span>
+            </div>
+            <div class="project-content">
+              <h5>Code</h5>
+              <p>PHP, MySQL, HTML, CSS, JavaScript, Wordpress</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 fl hidden-xs hidden-sm">
+          <div class='device-imac-hold fr'>
+            <div class='device-imac-main'>
+              <div class='device-imac-inner'>
+                <%= image_tag 'clicknow-imac.jpg', alt: 'ClickNow' %>
+              </div><!-- 'device-imac-inner' -->
+            </div><!-- 'device-imac-main' -->
+            <div class='device-imac-sub'>
+              <div class='device-imac-top'></div>
+              <div class='device-imac-mid'>
+                <div class='device-imac-part'></div>
+              </div><!-- 'device-imac-mid' -->
+              <div class='device-imac-bot'></div>
+            </div><!-- 'device-imac-bot' -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>

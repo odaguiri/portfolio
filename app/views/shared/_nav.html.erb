@@ -1,0 +1,21 @@
+<nav id="main-nav" class="nav">
+  <div class="nav-toggle-bar container hidden-sm hidden-md hidden-lg">
+    <button id="toggle-nav" class="nav-toggle" onClick="toggleNav('main-nav')">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32">
+        <rect x="0" y="3" fill="#fff" width="32" height="5" rx="3" ry="3"/>
+        <rect x="0" y="14" fill="#fff" width="32" height="5" rx="3" ry="3"/>
+        <rect x="0" y="25" fill="#fff" width="32" height="5" rx="3" ry="3"/>
+      </svg>
+    </button>
+    <%= link_to 'Odaga', root_path, class: 'nav-brand' %>
+  </div>
+  <div id="main-nav-bar" class="nav-bar">
+    <div class="container">
+      <ul class="list-unstyled">
+        <li class="hidden-xs"><%= link_to 'Odaga', root_path, class: 'nav-brand' %></li>
+        <li><%= link_to 'Experiences', root_path(anchor: 'experiences'), class: 'nav-link' %></li>
+        <li><%= link_to 'Blog', '#', class: 'nav-link' %></li>
+      </ul>
+    </div>
+  </div>
+</nav>

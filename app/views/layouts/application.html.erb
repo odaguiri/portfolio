@@ -12,9 +12,11 @@
   </head>
 
   <body>
-    <main>
-      <%= render 'shared/nav' %>
-      <%= yield %>
+    <main class="main">
+      <div class="main-body">
+        <%= render 'shared/nav' %>
+        <%= yield %>
+      </div>
       <%= render 'shared/footer' %>
     </main>
     <%= render 'shared/scripts' %>

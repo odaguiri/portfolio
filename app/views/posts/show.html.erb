@@ -1,0 +1,17 @@
+<% provide :title, @post.title %>
+
+<section class="section">
+  <header class="section-header tac">
+    <div class="container">
+      <h1><%= @post.title %></h1>
+    </div>
+  </header>
+  <div class="section-body container">
+    <%= simple_format @post.description %>
+
+    <aside class="btn btn-group">
+      <%= link_to 'Edit', edit_post_path(@post) %> |
+      <%= link_to 'Back', posts_path %>
+    </aside>
+  </div>
+</section>

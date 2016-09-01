@@ -1,0 +1,14 @@
+<% provide :title, 'New post' %>
+
+<section id="new-post" class="section">
+  <header class="section-header tac">
+    <div class="container">
+      <h1>New post</h1>
+    </div>
+  </header>
+
+  <div class="section-body container">
+    <%= render 'form', post: @post %>
+    <%= link_to 'Back', posts_path, class: 'btn btn-secondary' %>
+  </div>
+</section>

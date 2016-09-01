@@ -1,0 +1,26 @@
+<% provide :title, 'Posts' %>
+
+<section id="posts" class="section">
+  <header class="section-header tac">
+    <div class="container">
+      <h1>Posts</h1>
+      <%= link_to 'New Post', new_post_path, class: 'btn btn-secondary' %>
+    </div>
+  </header>
+  <div class="section-body container">
+    <% @posts.each do |post| %>
+      <ul class="list-unstyled">
+        <li>
+          <%= link_to post do %>
+            <strong><%= post.title %></strong> - 
+            <time><%= post.created_at.to_date %></time> -
+            <%= truncate(post.description) %>
+          <% end %>
+          - 
+          <%= link_to 'Edit', edit_post_path(post) %> |
+          <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </li>
+      </ul>
+    <% end %>
+  </div>
+</section>

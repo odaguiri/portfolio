@@ -20,10 +20,12 @@
           </div>
           <footer class="post-footer">
             <%= link_to 'Read more...', post %>
-            <div class="fr">
-              <%= link_to 'Edit', edit_post_path(post) %> |
-              <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-            </div>
+            <% if user_signed_in? %>
+              <div class="fr">
+                <%= link_to 'Edit', edit_post_path(post) %> |
+                <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+              </div>
+            <% end %>
           </footer>
         </article>
       <% end %>

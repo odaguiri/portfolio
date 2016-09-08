@@ -7,7 +7,7 @@
     </div>
   </header>
   <div class="section-body container">
-    <%= simple_format @post.description %>
+    <%= @post.description.html_safe %>
     <% if user_signed_in? %>
       <footer class="post-footer">
         <%= link_to 'Edit', edit_post_path(@post) %> |

@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.5'
 
 # assets
 gem 'rails-assets-normalize-css', source: 'https://rails-assets.org'
+gem 'rails-assets-medium-editor', source: 'https://rails-assets.org'
 
 group :development, :test do
   gem 'byebug', platform: :mri

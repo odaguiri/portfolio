@@ -14,11 +14,11 @@
       <% @posts.each do |post| %>
         <article class="post col-md-4">
           <header class="post-header">
-            <h2><%= truncate post.title, length: 30 %></h2>
+            <h2><%= truncate post.title, length: 25 %></h2>
             <time><%= post.created_at.to_date %></time>
           </header>
           <div class="post-body">
-            <%= simple_format truncate(post.description) %>
+            <%= simple_format truncate(strip_tags(post.description.html_safe), length: 150) %>
           </div>
           <footer class="post-footer">
             <%= link_to 'Read more...', post %>

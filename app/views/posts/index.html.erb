@@ -14,7 +14,7 @@
       <% @posts.each do |post| %>
         <article class="post col-md-4">
           <header class="post-header">
-            <h2><%= truncate post.title, length: 25 %></h2>
+            <h2><%= link_to truncate(post.title, length: 25), post %></h2>
             <time><%= post.created_at.to_date %></time>
           </header>
           <div class="post-body">

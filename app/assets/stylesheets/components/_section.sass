@@ -18,3 +18,19 @@
     padding: $padding-large-vertical $padding-large-horizontal
     color: $yellow-500
     overflow-x: auto
+
+.section-bar
+  text-transform: uppercase
+  margin-bottom: $padding-large-vertical * 3
+
+  time
+    display: block
+    margin-bottom: $padding-large-vertical
+  
+  +respond-to-lg-gte
+    time
+      display: inline-block
+
+    .fb-like
+      float: right
+

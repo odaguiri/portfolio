@@ -7,6 +7,10 @@
     </div>
   </header>
   <div class="section-body container">
+    <div class="section-bar">
+      <time><%= l @post.created_at, format: :long %></time>
+      <%= fb_like(post_url(@post)) %>
+    </div>
     <%= raw @post.description %>
     <% if user_signed_in? %>
       <footer class="post-footer">

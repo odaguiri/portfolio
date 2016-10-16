@@ -12,9 +12,9 @@
   <div id="main-nav-bar" class="nav-bar">
     <div class="container">
       <ul class="list-unstyled">
-        <li class="hidden-xs"><%= link_to 'Odaga', root_path, class: 'nav-brand' %></li>
-        <li><%= link_to 'Experiences', root_path(anchor: 'projects'), class: 'nav-link' %></li>
-        <li><%= link_to 'Blog', posts_path, class: 'nav-link' %></li>
+        <li class="hidden-xs"><%= link_to 'Odaga', root_path, class: 'nav-brand', onClick: "closeNav('main-nav')" %></li>
+        <li><%= link_to 'Experiences', root_path(anchor: 'projects'), class: 'nav-link', onClick: "closeNav('main-nav')" %></li>
+        <li><%= link_to 'Blog', posts_path, class: 'nav-link', onClick: "closeNav('main-nav')" %></li>
       </ul>
     </div>
   </div>

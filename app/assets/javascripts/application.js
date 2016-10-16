@@ -7,6 +7,7 @@
 //= require components/close_nav
 //= require components/editor
 //= require components/nav_scroll
+//= require components/scroll_transition
 //= require components/toggle_nav
 
 window.load = Initialize.allElements();

@@ -1,4 +1,9 @@
-<% provide :title, @post.title %>
+<%
+provide :title, @post.title
+provide :og_url, post_url(@post)
+provide :og_title, @post.title
+provide :og_description, truncate(strip_tags(@post.description.html_safe), length: 150)
+%>
 
 <section class="section">
   <header class="section-header tac">

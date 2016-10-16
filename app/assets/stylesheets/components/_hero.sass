@@ -9,7 +9,7 @@
   color: #fff
   width: 100%
   background-color: $cyan-800
-  padding: $padding-large-vertical*15 0 $padding-large-vertical*6 0
+  padding: $padding-large-vertical*15 0 $padding-large-vertical*7 0
 
   p
     margin-bottom: $padding-large-vertical*2
@@ -24,6 +24,29 @@
   overflow: hidden
   width: 100px
 
+.hero-down
+  width: 30px
+  height: 30px
+  position: absolute
+  display: block
+  left: 50%
+  margin-left: -15px
+  margin-top: 15px
+  font-size: 30px
+  font-weight: bold
+  animation: herodown 2s infinite ease-in-out
+
 +respond-to-xs
   .hero
     padding-top: $padding-large-vertical*11
+
+@keyframes herodown
+  0%
+    margin-top: 22px
+
+  50%
+    margin-top: 15px
+
+  100%
+    margin-top: 22px
+

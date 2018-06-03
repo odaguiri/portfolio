@@ -12,9 +12,10 @@
 default: &default
   adapter: mysql2
   encoding: utf8
+  host: <%= ENV['MYSQL_HOST'] %>
   pool: 5
-  username: root
-  password:
+  username: <%= ENV['MYSQL_USER'] %>
+  password: <%= ENV['MYSQL_PASSWORD'] %>
 
 development:
   <<: *default
@@ -49,5 +50,3 @@ test:
 production:
   <<: *default
   database: portfolio_production
-  username: portfolio
-  password: <%= ENV['PORTFOLIO_DATABASE_PASSWORD'] %>

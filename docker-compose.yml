@@ -1,0 +1,21 @@
+version: '3' 
+services:
+  mysql:
+    env_file:
+      - .env
+    image: mysql:5.7.22
+    ports:
+      - 3306:3306
+    volumes:
+      - ./docker-data/mysql:/var/lib/mysql
+  portfolio:
+    env_file:
+      - .env
+    build: ./
+    command: bundle exec puma -C ./config/puma.rb
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/portfolio
+    depends_on:
+      - mysql

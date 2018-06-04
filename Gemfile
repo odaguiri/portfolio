@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # core
 gem 'rails', '~> 5.0.0'
-gem 'mysql2', '~> 0.3.20'
+gem 'pg'
 gem 'puma'
 
 # preprocessors

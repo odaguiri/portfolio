@@ -1,13 +1,13 @@
-version: '3' 
+version: '3.6' 
 services:
-  mysql:
+  postgres:
     env_file:
       - .env
-    image: mysql:5.7.22
+    image: postgres:9.6
     ports:
       - 3306:3306
     volumes:
-      - ./docker-data/mysql:/var/lib/mysql
+      - db-data:/var/lib/postgresql/data
   portfolio:
     env_file:
       - .env
@@ -17,5 +17,9 @@ services:
       - 3000:3000
     volumes:
       - ./:/portfolio
+      - gems-portfolio:/bundle
     depends_on:
-      - mysql
+      - postgres
+volumes:
+  db-data:
+  gems-portfolio:

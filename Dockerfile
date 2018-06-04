@@ -4,10 +4,15 @@ FROM ruby:2.5
 RUN apt-get update -qq && apt-get install -y build-essential mysql-client nodejs
 
 # setup app
-RUN mkdir /portfolio
-WORKDIR /portfolio
-COPY Gemfile /portfolio/Gemfile
-COPY Gemfile.lock /portfolio/Gemfile.lock
-RUN bundle install
-RUN bundle exec rails assets:precompile
-COPY . /portfolio
+ENV APP /portfolio
+RUN mkdir $APP
+WORKDIR $APP
+
+# add persistent bundle volume
+ENV BUNDLE_PATH=/bundle
+
+# add bundle path
+ENV PATH $APP/bin:$BUNDLE_PATH/bin:$PATH
+
+# enable repository into container
+ADD . $APP

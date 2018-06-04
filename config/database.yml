@@ -1,21 +1,16 @@
-# MySQL. Versions 5.0 and up are supported.
+# Install the PostgreSQL driver
+#   gem install pg
 #
-# Install the MySQL driver
-#   gem install mysql2
-#
-# Ensure the MySQL gem is defined in your Gemfile
-#   gem 'mysql2'
-#
-# And be sure to use new-style password hashing:
-#   http://dev.mysql.com/doc/refman/5.7/en/old-client.html
+# Ensure the postgreSQL gem is defined in your Gemfile
+#   gem 'pg'
 #
 default: &default
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
-  host: <%= ENV['MYSQL_HOST'] %>
+  host: <%= ENV['POSTGRES_HOST'] %>
   pool: 5
-  username: <%= ENV['MYSQL_USER'] %>
-  password: <%= ENV['MYSQL_PASSWORD'] %>
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
 
 development:
   <<: *default
@@ -40,7 +35,7 @@ test:
 # On Heroku and other platform providers, you may have a full connection URL
 # available as an environment variable. For example:
 #
-#   DATABASE_URL="mysql2://myuser:mypass@localhost/somedatabase"
+#   DATABASE_URL="postgresql://myuser:mypass@localhost/somedatabase"
 #
 # You can use this database configuration with:
 #

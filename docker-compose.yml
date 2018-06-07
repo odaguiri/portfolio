@@ -15,28 +15,6 @@ services:
     volumes:
       - db-data:/var/lib/postgresql/data
 
-  # EFK
-  fluentd:
-    build: ./config/fluentd
-    volumes:
-      - ./config/fluentd/conf:/fluentd/etc
-    depends_on:
-      - elasticsearch
-    ports:
-      - 24224:24224
-      - 24224:24224/udp
-  elasticsearch:
-    image: elasticsearch
-    expose:
-      - 9200
-    ports:
-      - 9200:9200
-  kibana:
-    image: kibana
-    links:
-      - elasticsearch
-    ports:
-      - 5601:5601
   portfolio:
     env_file:
       - .env
@@ -53,7 +31,7 @@ services:
     logging:
       driver: fluentd
       options:
-        fluentd-address: localhost:24224
+        fluentd-address: "${FLUENTD_URL}"
         tag: portfolio.access
 volumes:
   db-data:

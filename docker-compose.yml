@@ -27,7 +27,6 @@ services:
       - gems-portfolio:/bundle
     depends_on:
       - postgres
-      - fluentd
     logging:
       driver: fluentd
       options:

@@ -13,6 +13,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'lograge'
 gem 'logstash-event'
 
+# logs
+gem 'act-fluent-logger-rails'
+
 # environments
 gem 'dotenv-rails'
 

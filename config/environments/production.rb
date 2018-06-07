@@ -77,4 +77,17 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  if ENV["RAILS_LOG_TO_STDOUT"].present?
+    config.logger = ActFluentLoggerRails::Logger.new
+    config.lograge.enabled = true
+    config.lograge.formatter = Lograge::Formatters::Json.new
+    config.lograge.custom_options = lambda do |event|
+      params = event.payload[:params].reject { |k| %w(controller action).include?(k) }
+      {
+        name: 'portfolio.request',
+        "params" => params
+      }
+    end
+  end
 end

@@ -30,7 +30,7 @@ services:
     logging:
       driver: fluentd
       options:
-        fluentd-address: "${FLUENTD_URL}"
+        fluentd-address: "${FLUENTD_HOST}:${FLUENTD_PORT}"
         tag: portfolio.access
 volumes:
   db-data:

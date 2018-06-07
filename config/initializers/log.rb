@@ -3,10 +3,11 @@ return unless ENV["RAILS_LOG_TO_STDOUT"].present?
 
 Rails.application.configure do
   logger           = ActiveSupport::Logger.new(STDOUT)
-  #logger.formatter = config.log_formatter
+  logger.formatter = config.log_formatter
+  config.log_level = :info
   config.logger = logger
   config.lograge.enabled = true
-  config.lograge.formatter = Lograge::Formatters::Logstash.new
+  config.lograge.formatter = Lograge::Formatters::Json.new
   config.lograge.custom_options = lambda do |event|
     params = event.payload[:params].reject { |k| %w(controller action).include?(k) }
     {

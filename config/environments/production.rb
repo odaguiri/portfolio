@@ -85,7 +85,7 @@ Rails.application.configure do
     config.lograge.custom_options = lambda do |event|
       params = event.payload[:params].reject { |k| %w(controller action).include?(k) }
       {
-        name: 'portfolio.request',
+        format: '*/*',
         "params" => params
       }
     end

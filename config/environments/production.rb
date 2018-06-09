@@ -44,7 +44,7 @@ Rails.application.configure do
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
-  config.log_level = :debug
+  config.log_level = :info
 
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
@@ -85,8 +85,9 @@ Rails.application.configure do
     config.lograge.custom_options = lambda do |event|
       params = event.payload[:params].reject { |k| %w(controller action).include?(k) }
       {
-        format: '*/*',
-        "params" => params
+        "params" => params,
+        remote_ip: event.payload[:remote_ip],
+        "@timestamp": event.time
       }
     end
   end

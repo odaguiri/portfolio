@@ -12,6 +12,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'lograge'
 gem 'logstash-event'
+gem 'geocoder'
 
 # logs
 gem 'act-fluent-logger-rails'

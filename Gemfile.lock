@@ -71,6 +71,7 @@ GEM
     fluent-logger (0.7.2)
       msgpack (>= 1.0.0, < 2)
     formatador (0.2.5)
+    geocoder (1.4.9)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     guard (2.14.2)
@@ -209,6 +210,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   dotenv-rails
+  geocoder
   guard
   guard-livereload
   jbuilder (~> 2.5)

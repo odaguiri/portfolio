@@ -12,7 +12,11 @@ WORKDIR $APP
 ENV BUNDLE_PATH=/bundle
 
 # add bundle path
+
+ENV BUNDLE_GEMFILE=$APP/Gemfile 
 ENV PATH $APP/bin:$BUNDLE_PATH/bin:$PATH
 
 # enable repository into container
 ADD . $APP
+
+RUN bundle install 

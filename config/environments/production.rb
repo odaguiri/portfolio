@@ -86,7 +86,9 @@ Rails.application.configure do
       params = event.payload[:params].reject { |k| %w(controller action).include?(k) }
       {
         "params" => params,
-        "@timestamp": event.time
+	"remote_ip" => event.payload[:remote_ip],
+        "@timestamp" => event.time,
+	"location" => event.payload[:location]
       }
     end
   end

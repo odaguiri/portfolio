@@ -1,5 +1,0 @@
-production:
-  fluent_host:   <%= ENV['FLUENTD_HOST'] %>
-  fluent_port:   <%= ENV['FLUENTD_PORT'] %>
-  tag:           'portfolio'
-  messages_type: 'string'

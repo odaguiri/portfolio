@@ -4,35 +4,9 @@ services:
     image: nginx:latest
     ports:
       - 80:80
+    environment:
+      - NGINX_HOST=odaga.com.br
+      - NGINX_PORT=80
     volumes:
       - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
-  postgres:
-    env_file:
-      - .env
-    image: postgres:9.6
-    ports:
-      - 3306:3306
-    volumes:
-      - db-data:/var/lib/postgresql/data
-
-  portfolio:
-    env_file:
-      - .env
-    build: ./
-    command: bundle exec rails s -b 0.0.0.0
-    # command: bundle exec puma -C ./config/puma.rb
-    ports:
-      - 3000:3000
-    volumes:
-      - ./:/portfolio
-      - gems-portfolio:/bundle
-    depends_on:
-      - postgres
-    logging:
-      driver: fluentd
-      options:
-        fluentd-address: "${FLUENTD_HOST}:${FLUENTD_PORT}"
-        tag: portfolio.access
-volumes:
-  db-data:
-  gems-portfolio:
+      - ./:/usr/share/nginx/html:ro
